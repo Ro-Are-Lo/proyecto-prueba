@@ -1,0 +1,18 @@
+<h2>{{ idProducto ? 'Editar Producto' : 'Nuevo Producto' }}</h2>
+
+<form (ngSubmit)="guardarProducto()">
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="producto.nombre" name="nombre" required>
+
+  <label>Descripción:</label>
+  <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" required>
+
+  <label>Precio:</label>
+  <input type="number" [(ngModel)]="producto.precio" name="precio" required>
+
+  <label>Stock:</label>
+  <input type="number" [(ngModel)]="producto.stock" name="stock" required>
+
+  <button type="submit" class="btn btn-success">Guardar</button>
+  <a routerLink="/" class="btn btn-secondary">Cancelar</a>
+</form>
